@@ -1,0 +1,54 @@
+.piano {
+  margin-top: 20px;
+}
+
+#piano {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  height: 200px;
+  position: relative;
+}
+
+#piano li {
+  flex: 1;
+  margin: 0 2px;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+
+#piano li.white {
+  background-color: white;
+  border: 1px solid #ccc;
+  height: 100%;
+  width: 14.28%; /* 100% / 7 white keys */
+}
+
+#piano li.black {
+  background-color: black;
+  color: white;
+  height: 60%;
+  position: absolute;
+  width: 8%;
+  z-index: 1;
+}
+
+#piano li.black:nth-of-type(2) { left: 10%; }
+#piano li.black:nth-of-type(4) { left: 24.5%; }
+#piano li.black:nth-of-type(7) { left: 53%; }
+#piano li.black:nth-of-type(9) { left: 67.5%; }
+#piano li.black:nth-of-type(11) { left: 82%; }
+
+#piano li:hover {
+  background-color: #e0e0e0;
+}
+
+#piano li.black:hover {
+  background-color: #333;
+}
