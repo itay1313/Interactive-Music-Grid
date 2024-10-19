@@ -1,5 +1,8 @@
 .piano {
-  margin-top: 20px;
+  margin-top: 40px;
+  background-color: #282828;
+  padding: 20px;
+  border-radius: 8px;
 }
 
 #piano {
@@ -21,17 +24,19 @@
   justify-content: center;
   padding-bottom: 10px;
   font-weight: bold;
+  transition: all 0.3s ease;
 }
 
 #piano li.white {
-  background-color: white;
-  border: 1px solid #ccc;
+  background-color: #ffffff;
+  border: 1px solid #282828;
   height: 100%;
-  width: 14.28%; /* 100% / 7 white keys */
+  width: 14.28%;
+  color: #282828;
 }
 
 #piano li.black {
-  background-color: black;
+  background-color: #282828;
   color: white;
   height: 60%;
   position: absolute;
@@ -46,9 +51,10 @@
 #piano li.black:nth-of-type(11) { left: 82%; }
 
 #piano li:hover {
-  background-color: #e0e0e0;
+  background-color: #1DB954;
+  color: white;
 }
 
 #piano li.black:hover {
-  background-color: #333;
+  background-color: #1ed760;
 }

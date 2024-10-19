@@ -1,12 +1,15 @@
 import React from 'react';
+import * as Tone from 'tone';
 import './Piano.css';
 
 const notes = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B', 'C'];
 
+const synth = new Tone.Synth().toDestination();
+
 function Piano() {
   const playNote = (note, index) => {
     const octave = index === notes.length - 1 ? '5' : '4';
-    window.playNote(note + octave);
+    synth.triggerAttackRelease(note + octave, '8n');
   };
 
   return (

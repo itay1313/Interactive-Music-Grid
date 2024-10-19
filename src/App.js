@@ -4,7 +4,7 @@ import Piano from './Piano';
 import './App.css';
 
 function App() {
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(true);
 
   const togglePlay = () => {
     setIsPlaying(!isPlaying);
@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="App">
       <h1>Interactive Music Grid</h1>
-      <button onClick={togglePlay}>{isPlaying ? 'Stop' : 'Play'}</button>
+      <button onClick={togglePlay}>{isPlaying ? 'Pause' : 'Resume'}</button>
       <InstrumentGrid isPlaying={isPlaying} />
       <Piano />
     </div>

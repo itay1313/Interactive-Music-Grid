@@ -1,22 +1,32 @@
 .instrument-box {
-  background-color: #f0f0f0;
-  border: 2px solid #333;
-  border-radius: 10px;
+  background-color: #282828;
+  border: none;
+  border-radius: 8px;
   padding: 20px;
-  transition: background-color 0.3s;
+  transition: all 0.3s ease;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .instrument-box:hover {
-  background-color: #e0e0e0;
+  background-color: #3E3E3E;
+  transform: translateY(-5px);
 }
 
 .instrument-box.active {
-  background-color: #4CAF50;
+  background-color: #1DB954;
   color: white;
 }
 
 .instrument-box span {
   font-size: 18px;
   font-weight: bold;
+}
+
+.instrument-icon {
+  font-size: 36px;
+  margin-bottom: 10px;
 }
